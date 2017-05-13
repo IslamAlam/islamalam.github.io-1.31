@@ -1,0 +1,88 @@
+---
+title: Resume
+layout: default
+navigation_weight: 2
+icon: icon fa fa-newspaper-o
+permalink: /resume/
+---
+<div class="headercontent">
+	<div id="resume" class="page">
+		<div class="pageheader">
+		<div class="section-container">
+		<!-- Resume Section -->
+			<article class="hs-content resume-section" id="section2">
+
+			    <div class="title" >
+			        <h3>RESUME</h3>
+			        </div>
+			        <!-- Resume Wrapper -->
+			        <div class="resume-wrapper">
+			            <ul class="resume">
+			                <!-- Resume timeline -->
+			                <li class="time-label">
+			                    <span class="content-title">EDUCATION</span>
+			                </li>
+			                <!-- Eduaction -->
+							{% for edu in site.data.edu %}
+							<li>
+								<div class="resume-tag">
+								    <span class="fa fa-graduation-cap"></span>
+								    <div class="resume-date">
+								        <span>{{ edu.end | date: "%b %Y"}}</span>
+								        <div class="separator"></div>
+								        <span>{{ edu.start | date: "%b %Y"}}</span>
+								    </div>
+								</div>
+								<div class="timeline-item">
+								    <span class="timeline-location"><i class="fa fa-map-marker"></i>{{ edu.location }}</span>
+								    <h3 class="timeline-header">{{ edu.degree }}</h3>
+								    <div class="timeline-body">
+								      <h4>{{ edu.institution }}</h4>
+								      	<span>{{ edu.details }}</span>
+								    </div>
+								</div>
+							</li>
+							{% endfor %}
+							<!-- End Eduaction -->
+			                
+			                <br><br><br>
+			                 <!-- Reserach --> 
+			                         
+			                <li class="time-label">
+			                    <span class="content-title">RESEARCH & WORK EXPERIENCE</span>
+			                </li>
+
+			                <!-- Reserach -->
+							{% for res in site.data.res %}
+							<li>
+								<div class="resume-tag">
+			                        <span class="fa fa-briefcase"></span>
+			                        <div class="resume-date">
+								        <span>{{ res.end | date: "%b %Y"}}</span>
+								        <div class="separator"></div>
+								        <span>{{ res.start | date: "%b %Y"}}</span>
+								    </div>
+								</div>
+								<div class="timeline-item">
+								    <span class="timeline-location"><i class="fa fa-map-marker"></i>{{ res.location }}</span>
+								    <h3 class="timeline-header">{{ res.position }}</h3>
+								    <div class="timeline-body">
+								      <h4>{{ res.institution }}</h4>
+								      	<span>{{ res.details }}</span>
+								    </div>
+								</div>
+							</li>
+							{% endfor %}
+							<!-- End Reserach -->
+			               
+			                <!-- End Resume timeline -->
+			            </ul>
+			        </div>
+			        <!-- End Resume Wrapper -->
+			    </div>
+			</article>
+			<!-- End Resume Section-->                         
+		</div>
+	</div>
+</div>
+

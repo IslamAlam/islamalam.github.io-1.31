@@ -1,0 +1,85 @@
+---
+title: About Me
+layout: default
+navigation_weight: 1
+icon: icon fa fa-home
+---
+<div id="about" class="page home" data-pos="home">
+    <div class="pageheader">
+        <div class="headercontent">
+            <div class="section-container">
+                
+                <div class="row">
+                    <div class="col-sm-2 visible-sm"></div>
+                    <div class="col-sm-8 col-md-5">
+                        <div class="biothumb">
+                            <img alt="image" src="img/personal/01.jpg"  class="img-responsive">
+                            <div class="overlay">
+                                
+                                <h1 class="">{{ site.author }}</h1>
+                                <ul class="list-unstyled">
+                                    <li>Graduate Dept. Astronautical/Space Engineering</li>
+                                    <li>Faculty of Aeronautics and Astronautics</li>
+                                    <li>Istanbul Technical University</li>
+                                </ul>
+                            </div> 
+                            
+                               
+                        </div>
+                        
+                    </div>
+                    <div class="clearfix visible-sm visible-xs"></div>
+                    <div class="col-sm-12 col-md-7">
+                        <h3 class="title">Bio</h3>
+                        <p>Islam Mansour is a passionate person about self-learning along his pathway of life. Mansour is a Space Engineer. His story started along the first decade of his life, mainly by his parents’ love which he was lucky to have. And his relatives and parents have been bringing toys (trucks, cars, etc…), and he was always wondering how it works and disassemble it.</p>
+
+                        <p>Dr. Ahmed Zewail, Mustafa Mahmoud, and others inspire him along his way to love and adore science as gift that helps us to understand the universe around us. At the Astronomical Society of Mahmoud Mosque, they were lecturing about astronomy, observation and astrophysics. There, he observed the second solar eclipse that he remembers at 2009 and have learned how to build his first home made telescope. Moreover, he found his best teacher ever Mr. Ibrahim Yehia.</p>
+                    </div>  
+                    
+                </div>
+            </div>        
+        </div>
+    </div>
+
+
+<div class="section color-2">
+<div class="section-container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="title text-center">
+                <h3>Honors, Awards and Grants</h3>
+            </div>
+            <ul class="timeline">
+
+                {% for award in site.data.award %}
+                <li>
+                    <div class="date">{{ award.date }}</div>
+                    <div class="circle"></div>
+                    <div class="data">
+                        <div class="subject">{{ award.title }}</div>
+                        <div class="text row"> 
+
+                            <div class="col-md-10">
+                                {{ award.details }}
+                            <ul id="grid" class="grid">   
+                            <li>
+                            <div><img alt="image" class="thumbnail img-responsive" src="{{ site.baseurl }}{{ award.image_path }}"><a href="{{ site.baseurl }}{{ award.image_path }}" class="popup-with-move-anim"><div class="over"><div class="comein"><i class="fa fa-search"></i><div class="comein-bg"></div></div></div></a>
+                            </div>
+                            </li> 
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li> 
+                {% endfor %}
+
+                 
+            </ul>
+        </div>
+    </div>
+</div>
+</div> 
+
+
+</div>
+
